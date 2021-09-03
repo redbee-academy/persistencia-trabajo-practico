@@ -12,6 +12,14 @@ Ubicados en la ra&iacute;z del proyecto, ejecutar en la terminal:
 ./gradlew run
 ```
 
+## Pruebas
+
+Ubicados en la ra&iacute;z del proyecto, ejecutar en la terminal:
+
+```bash
+./gradlew test
+```
+
 ## Contacto
 
 - **Lautaro Aguilera** (lautaro.aguilera@redb.ee)
