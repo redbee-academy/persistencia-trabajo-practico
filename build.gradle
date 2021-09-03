@@ -1,5 +1,4 @@
 plugins {
-    id 'java'
     id 'application'
 }
 
@@ -10,6 +9,7 @@ sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -20,9 +20,13 @@ dependencies {
     /* Driver */
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.12'
 
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'org.junit.jupiter', name:'junit-jupiter', version: '5.7.1'
 }
 
 application {
     mainClassName = 'io.redbee.academy.persistencia.Application'
+}
+
+test {
+    useJUnitPlatform()
 }
