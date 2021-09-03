@@ -25,7 +25,7 @@ public class TaskFileRepositoryTest {
     public void testSaveTask() {
         Task task = new Task("Task description", LocalDate.now(), 1);
 
-        TaskRepository repository = new TaskFileRepository();
+        TaskRepository repository = new TaskFileRepository("some/fake/path.csv");
 
         var exception = assertThrows(UnsupportedOperationException.class, () -> repository.save(task));
 
@@ -35,7 +35,7 @@ public class TaskFileRepositoryTest {
     @Test
     @DisplayName("Save a list of tasks")
     public void testSaveTasksList() {
-        TaskRepository repository = new TaskFileRepository();
+        TaskRepository repository = new TaskFileRepository("some/fake/path.csv");
 
         List<Task> tasks = List.of(
                 new Task("Task 1", LocalDate.MAX, 1),

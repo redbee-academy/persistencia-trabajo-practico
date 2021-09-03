@@ -7,6 +7,12 @@ import java.util.List;
 
 public class TaskFileRepository implements TaskRepository {
 
+    private final String filePath;
+
+    public TaskFileRepository(String filePath) {
+        this.filePath = filePath;
+    }
+
     @Override
     public List<Task> getAll() {
         return Collections.emptyList();
